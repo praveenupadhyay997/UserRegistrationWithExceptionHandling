@@ -63,5 +63,6 @@ namespace UserRegistrationValidationWithMST
         {
             return Regex.IsMatch(password, PASSWORD_UC8);
         }
+
     }
 }
