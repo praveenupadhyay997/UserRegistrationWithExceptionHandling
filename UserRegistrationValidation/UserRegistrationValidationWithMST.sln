@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistrationValidationWithMST", "UserRegistrationValidation\UserRegistrationValidationWithMST.csproj", "{71D14E37-5732-49AF-B836-9DD99ECF2385}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71D14E37-5732-49AF-B836-9DD99ECF2385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D14E37-5732-49AF-B836-9DD99ECF2385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D14E37-5732-49AF-B836-9DD99ECF2385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D14E37-5732-49AF-B836-9DD99ECF2385}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6332CB0B-8F47-4928-97FB-AA200F18FA73}
+	EndGlobalSection
+EndGlobal
