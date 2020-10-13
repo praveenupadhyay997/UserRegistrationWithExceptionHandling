@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistrationValidationWithMST
 {
-    class UserDataValidation
+    public class UserDataValidation
     {
         /// <summary>
         /// Regular Expression for matching parameters
