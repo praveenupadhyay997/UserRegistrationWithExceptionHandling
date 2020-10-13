@@ -37,6 +37,13 @@ namespace UserRegistrationValidationWithMST
             validationKey = dataValidation.isValidEmailID(emailId);
             Console.WriteLine(validationKey ? "{0} is a Valid Email-ID." : "{0} is Not a Valid Email-ID.", emailId);
 
+
+            Console.WriteLine("Enter User Mobile Number=");
+            mobileNumber = Console.ReadLine();
+
+            validationKey = dataValidation.isValidMobileNumber(mobileNumber);
+            Console.WriteLine(validationKey ? "{0} is a Valid Mobile Number." : "{0} is Not a Valid Mobile Number.", mobileNumber);
+
             Console.WriteLine("Enter User Password=");
             password = Console.ReadLine();
 
