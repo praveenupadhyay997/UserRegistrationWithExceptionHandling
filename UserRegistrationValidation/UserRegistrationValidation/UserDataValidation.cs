@@ -23,9 +23,19 @@ namespace UserRegistrationValidationWithMST
         /// <returns>
         ///   <c>true</c> if [if the patter matches] [the specified first name]; otherwise, <c>false</c>.
         /// </returns>
-        public bool isValidEmailID(string emailId)
+        public string isValidEmailID(string emailId)
         {
-            return Regex.IsMatch(emailId, EMAIL_REGX);
+            try
+            {
+                if (Regex.IsMatch(emailId, EMAIL_REGX))
+                    return "Correct Entry";
+                else
+                    throw new Exception();
+            }
+            catch
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.WRONG_MOBILENUMBER, "Invalid Entry");
+            }
         }
 
         /// <summary>
@@ -35,9 +45,19 @@ namespace UserRegistrationValidationWithMST
         /// <returns>
         ///   <c>true</c> if [is valid first name] [the specified first name]; otherwise, <c>false</c>.
         /// </returns>
-        public bool isValidName(string firstName)
+        public string isValidName(string Name)
         {
-            return Regex.IsMatch(firstName, FIRSTNAME_REGX);
+            try
+            {
+                if (Regex.IsMatch(Name, FIRSTNAME_REGX))
+                    return "Correct Entry";
+                else
+                    throw new Exception();
+            }
+            catch
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.WRONG_MOBILENUMBER, "Invalid Entry");
+            }
         }
 
         /// <summary>
@@ -47,9 +67,20 @@ namespace UserRegistrationValidationWithMST
         /// <returns>
         ///   <c>true</c> if [is valid mobile number] [the specified mobile number]; otherwise, <c>false</c>.
         /// </returns>
-        public bool isValidMobileNumber(string mobileNumber)
+        public string isValidMobileNumber(string mobileNumber)
         {
-            return Regex.IsMatch(mobileNumber, MOBILENUMBER_REGX);
+            try
+            {
+                if (Regex.IsMatch(mobileNumber, MOBILENUMBER_REGX))
+                    return "Correct Entry";
+                else
+                    throw new Exception();
+            }
+            catch
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.WRONG_MOBILENUMBER, "Invalid Entry");
+            }
+            
         }
 
         /// <summary>
@@ -59,10 +90,19 @@ namespace UserRegistrationValidationWithMST
         /// <returns>
         ///   <c>true</c> if [is valid password u c8] [the specified password]; otherwise, <c>false</c>.
         /// </returns>
-        public bool isValidPasswordUC8(string password)
+        public string isValidPasswordUC8(string password)
         {
-            return Regex.IsMatch(password, PASSWORD_UC8);
+            try
+            {
+                if (Regex.IsMatch(password, PASSWORD_UC8))
+                    return "Correct Entry";
+                else
+                    throw new Exception();
+            }
+            catch
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.WRONG_MOBILENUMBER, "Invalid Entry");
+            }
         }
-
     }
 }
