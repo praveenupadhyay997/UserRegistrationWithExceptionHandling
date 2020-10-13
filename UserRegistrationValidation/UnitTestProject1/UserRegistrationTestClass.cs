@@ -17,9 +17,15 @@ namespace UnitTestProject1
             //Arrange
             UserDataValidation userDataValidation = new UserDataValidation();
             //Act
-            bool expected = userDataValidation.isValidName("Praveen");
-            //Assert
-            Assert.IsTrue(expected);
+            try
+            {
+                string expected = userDataValidation.isValidName("praveen");
+            }
+            catch(UserRegistrationCustomException exception)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Entry", exception.Message);
+            }
         }
         /// <summary>
         /// To test the Last name
@@ -30,10 +36,15 @@ namespace UnitTestProject1
         {
             //Arrange
             UserDataValidation userDataValidation = new UserDataValidation();
-            //Act
-            bool expected = userDataValidation.isValidName("Upadhyay");
-            //Assert
-            Assert.IsTrue(expected);
+            try
+            {
+                string expected = userDataValidation.isValidName("upadhyay");
+            }
+            catch (UserRegistrationCustomException exception)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Entry", exception.Message);
+            }
         }
         /// <summary>
         /// To test the mobile number matching case
@@ -44,10 +55,15 @@ namespace UnitTestProject1
         {
             //Arrange
             UserDataValidation userDataValidation = new UserDataValidation();
-            //Act
-            bool expected = userDataValidation.isValidMobileNumber("91 9450347680");
-            //Assert
-            Assert.IsTrue(expected);
+            try
+            {
+                string expected = userDataValidation.isValidMobileNumber("9450357780");
+            }
+            catch (UserRegistrationCustomException exception)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Entry", exception.Message);
+            }
         }
         /// <summary>
         /// To test the e-mail matching case
@@ -58,10 +74,15 @@ namespace UnitTestProject1
         {
             //Arrange
             UserDataValidation userDataValidation = new UserDataValidation();
-            //Act
-            bool expected = userDataValidation.isValidEmailID("praveen-capgemini@gmail.co.in");
-            //Assert
-            Assert.IsTrue(expected);
+            try
+            {
+                string expected = userDataValidation.isValidEmailID("praveencapgemini@gmail.co.in");
+            }
+            catch (UserRegistrationCustomException exception)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Entry", exception.Message);
+            }
         }
         /// <summary>
         /// To test the password matching case
@@ -72,10 +93,15 @@ namespace UnitTestProject1
         {
             //Arrange
             UserDataValidation userDataValidation = new UserDataValidation();
-            //Act
-            bool expected = userDataValidation.isValidPasswordUC8("Praveen@1");
-            //Assert
-            Assert.IsTrue(expected);
+            try
+            {
+                string expected = userDataValidation.isValidPasswordUC8("praveen76@#");
+            }
+            catch (UserRegistrationCustomException exception)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Entry", exception.Message);
+            }
         }
     }
 }

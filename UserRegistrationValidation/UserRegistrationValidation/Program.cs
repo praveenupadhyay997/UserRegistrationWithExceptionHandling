@@ -18,37 +18,37 @@ namespace UserRegistrationValidationWithMST
             Console.WriteLine("================================================");
             Console.WriteLine("Welcome to User Registration Validation Program");
             Console.WriteLine("================================================");
-            bool validationKey;
             Console.WriteLine("Enter User First Name=");
             firstName = Console.ReadLine();
 
+            var validationKey="";
             validationKey = dataValidation.isValidName(firstName);
-            Console.WriteLine(validationKey ? "{0} is a Valid Name." : "{0} is Not a Valid First Name.", firstName);
+            Console.WriteLine(validationKey);
 
             Console.WriteLine("Enter User Last Name=");
             lastName = Console.ReadLine();
 
             validationKey = dataValidation.isValidName(lastName);
-            Console.WriteLine(validationKey ? "{0} is a Valid Last Name." : "{0} is Not a Valid Last Name.", lastName);
+            Console.WriteLine(validationKey);
 
             Console.WriteLine("Enter User Email Id=");
             emailId = Console.ReadLine();
 
             validationKey = dataValidation.isValidEmailID(emailId);
-            Console.WriteLine(validationKey ? "{0} is a Valid Email-ID." : "{0} is Not a Valid Email-ID.", emailId);
+            Console.WriteLine(validationKey);
 
 
             Console.WriteLine("Enter User Mobile Number=");
             mobileNumber = Console.ReadLine();
 
             validationKey = dataValidation.isValidMobileNumber(mobileNumber);
-            Console.WriteLine(validationKey ? "{0} is a Valid Mobile Number." : "{0} is Not a Valid Mobile Number.", mobileNumber);
+            Console.WriteLine(validationKey);
 
             Console.WriteLine("Enter User Password=");
             password = Console.ReadLine();
 
             validationKey = dataValidation.isValidPasswordUC8(password);
-            Console.WriteLine(validationKey ? "{0} is a Valid Password." : "{0} is Not a Valid Password.", password);
+            Console.WriteLine(validationKey);
         }
     }
 }
