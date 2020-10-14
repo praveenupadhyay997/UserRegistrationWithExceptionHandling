@@ -85,6 +85,29 @@ namespace UnitTestProject1
             }
         }
         /// <summary>
+        /// Test Case For Multiple Email Entries
+        /// </summary>
+        [DataRow("praveencapgemini@gmail.co.in")]
+        [DataRow("praveen-capgemini@gmail.co.in")]
+        [DataRow("praveencapgemini@gmail.co.nz")]
+        [TestCategory("Validate Multiple E-Mail")]
+        [TestMethod]
+        public void TestingInputForMultipleEmailId(string emailId)
+        {
+            //Arrange
+            UserDataValidation userDataValidation = new UserDataValidation();
+            try
+            {
+                    string expected = userDataValidation.isValidEmailID(emailId);
+                    Assert.AreEqual("Correct Entry", expected);
+            }
+            catch (UserRegistrationCustomException exception)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Entry", exception.Message);
+            }
+        }
+        /// <summary>
         /// To test the password matching case
         /// </summary>
         [TestCategory("Password")]
