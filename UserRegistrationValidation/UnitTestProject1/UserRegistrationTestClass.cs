@@ -1,14 +1,14 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UserRegistrationValidationWithMST;
-
 namespace UnitTestProject1
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using UserRegistrationValidationWithMST;
+
     [TestClass]
     public class UserRegistrationTestClass
     {
         public static bool actual = true;
         /// <summary>
-        /// To test the First name mathing case
+        /// To test the First name matching case on the set of rules mentioned
         /// </summary>
         [TestCategory("Names")]
         [TestMethod]
@@ -28,7 +28,7 @@ namespace UnitTestProject1
             }
         }
         /// <summary>
-        /// To test the Last name
+        /// To test the Last name on the same set of rules for first name
         /// </summary>
         [TestCategory("Names")]
         [TestMethod]

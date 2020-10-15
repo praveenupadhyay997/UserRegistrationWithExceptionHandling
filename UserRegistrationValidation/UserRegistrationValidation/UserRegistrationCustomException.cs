@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace UserRegistrationValidationWithMST
+﻿namespace UserRegistrationValidationWithMST
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class UserRegistrationCustomException : Exception
     {
         /// <summary>

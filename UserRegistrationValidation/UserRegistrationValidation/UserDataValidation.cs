@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-
-namespace UserRegistrationValidationWithMST
+﻿namespace UserRegistrationValidationWithMST
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
     public class UserDataValidation
     {
         /// <summary>
