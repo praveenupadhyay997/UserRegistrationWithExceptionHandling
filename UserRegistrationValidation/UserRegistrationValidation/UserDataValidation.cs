@@ -1,4 +1,10 @@
-﻿namespace UserRegistrationValidationWithMST
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="UserDataValidation.cs" company="Bridgelabz">
+//   Copyright © 2018 Company
+// </copyright>
+// <creator Name="Praveen Kumar Upadhyay"/>
+// --------------------------------------------------------------------------------------------------------------------
+namespace UserRegistrationValidationWithMST
 {
     using System;
     using System.Collections.Generic;
@@ -27,6 +33,7 @@
         {
             try
             {
+                //If the passed test value does not matches the regular expression pattern then throw a custom exception
                 if (Regex.IsMatch(emailId, EMAIL_REGX))
                     return "Correct Entry";
                 else
@@ -34,6 +41,7 @@
             }
             catch
             {
+                //Catch the custom exception
                 throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.WRONG_MOBILENUMBER, "Invalid Entry");
             }
         }
@@ -49,6 +57,7 @@
         {
             try
             {
+                //If the passed test value does not matches the regular expression pattern then throw a custom exception
                 if (Regex.IsMatch(Name, FIRSTNAME_REGX))
                     return "Correct Entry";
                 else
@@ -56,6 +65,7 @@
             }
             catch
             {
+                //Catch the custom exception
                 throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.WRONG_MOBILENUMBER, "Invalid Entry");
             }
         }
@@ -71,6 +81,7 @@
         {
             try
             {
+                //If the passed test value does not matches the regular expression pattern then throw a custom exception
                 if (Regex.IsMatch(mobileNumber, MOBILENUMBER_REGX))
                     return "Correct Entry";
                 else
@@ -78,6 +89,7 @@
             }
             catch
             {
+                //Catch the custom exception
                 throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.WRONG_MOBILENUMBER, "Invalid Entry");
             }
             
@@ -94,13 +106,15 @@
         {
             try
             {
+                //If the passed test value does not matches the regular expression pattern then throw a custom exception
                 if (Regex.IsMatch(password, PASSWORD_UC8))
                     return "Correct Entry";
                 else
                     throw new Exception();
             }
-            catch
+            catch(UserRegistrationCustomException)
             {
+                //Catch the custom exception
                 throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.WRONG_MOBILENUMBER, "Invalid Entry");
             }
         }
